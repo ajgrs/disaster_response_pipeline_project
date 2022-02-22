@@ -1,0 +1,408 @@
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'accuracy', cv = 3, verbose = 3)
+
+parameters = {'clf__estimator__n_estimators': [5, 5, 5]}
+
+FFitting 3 folds for each of 3 candidates, totalling 9 fits
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.20399755874275252, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:  2.5min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.20094598718339945, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:  4.9min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.19285932255111382, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.1916386939273726, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.19758925846811107, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.19682636557827282, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.19102837961550198, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.20415013732072018, total= 1.6min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.19835215135794934, total= 1.6min
+
+[Parallel(n_jobs=1)]: Done   9 out of   9 | elapsed: 22.1min finished
+
+precision    recall  f1-score   support
+
+               related       0.82      0.93      0.87      4943
+               request       0.69      0.48      0.57      1094
+                 offer       0.00      0.00      0.00        29
+           aid_related       0.68      0.64      0.66      2658
+          medical_help       0.49      0.16      0.24       520
+      medical_products       0.66      0.19      0.29       348
+     search_and_rescue       0.32      0.04      0.07       195
+              security       0.19      0.03      0.05       117
+              military       0.44      0.17      0.24       207
+           child_alone       0.00      0.00      0.00         0
+                 water       0.78      0.47      0.58       402
+                  food       0.77      0.62      0.69       705
+               shelter       0.78      0.39      0.52       546
+              clothing       0.36      0.09      0.14        90
+                 money       0.59      0.08      0.14       128
+        missing_people       0.22      0.03      0.05        66
+              refugees       0.51      0.10      0.17       194
+                 death       0.72      0.22      0.33       290
+             other_aid       0.44      0.11      0.18       847
+infrastructure_related       0.25      0.04      0.07       443
+             transport       0.46      0.12      0.18       295
+             buildings       0.57      0.22      0.31       327
+           electricity       0.29      0.04      0.07       120
+                 tools       0.00      0.00      0.00        39
+             hospitals       0.33      0.03      0.06        64
+                 shops       0.00      0.00      0.00        32
+           aid_centers       0.00      0.00      0.00        81
+  other_infrastructure       0.26      0.03      0.05       306
+       weather_related       0.79      0.67      0.72      1844
+                floods       0.78      0.43      0.55       546
+                 storm       0.67      0.41      0.51       594
+                  fire       0.33      0.03      0.06        65
+            earthquake       0.85      0.69      0.76       651
+                  cold       0.59      0.16      0.25       148
+         other_weather       0.31      0.08      0.13       332
+         direct_report       0.62      0.36      0.46      1222
+
+           avg / total       0.67      0.53      0.57     20488
+
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'accuracy', cv = 2, verbose = 3, n_jobs = -1)
+
+parameters = {'clf__estimator__n_estimators': [5, 5]}
+
+Fitting 2 folds for each of 2 candidates, totalling 4 fits
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.19062150340758824, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=-1)]: Done   1 out of   1 | elapsed:  2.2min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.19001118909571763, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed:  4.4min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.19692808463025124, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.1947919845387041, total= 1.5min
+
+[Parallel(n_jobs=-1)]: Done   4 out of   4 | elapsed:  8.7min finished
+
+grid search done.
+
+precision    recall  f1-score   support
+
+               related       0.83      0.92      0.87      4943
+               request       0.68      0.48      0.56      1094
+                 offer       0.00      0.00      0.00        29
+           aid_related       0.71      0.63      0.67      2658
+          medical_help       0.48      0.16      0.24       520
+      medical_products       0.72      0.18      0.28       348
+     search_and_rescue       0.46      0.11      0.17       195
+              security       0.21      0.03      0.06       117
+              military       0.49      0.13      0.21       207
+           child_alone       0.00      0.00      0.00         0
+                 water       0.72      0.52      0.60       402
+                  food       0.73      0.56      0.63       705
+               shelter       0.74      0.34      0.47       546
+              clothing       0.54      0.14      0.23        90
+                 money       0.65      0.10      0.18       128
+        missing_people       0.12      0.02      0.03        66
+              refugees       0.50      0.05      0.09       194
+                 death       0.68      0.24      0.36       290
+             other_aid       0.37      0.08      0.13       847
+infrastructure_related       0.32      0.04      0.07       443
+             transport       0.47      0.15      0.23       295
+             buildings       0.59      0.15      0.23       327
+           electricity       0.54      0.06      0.11       120
+                 tools       0.00      0.00      0.00        39
+             hospitals       0.14      0.02      0.03        64
+                 shops       0.00      0.00      0.00        32
+           aid_centers       0.00      0.00      0.00        81
+  other_infrastructure       0.14      0.01      0.02       306
+       weather_related       0.76      0.67      0.71      1844
+                floods       0.78      0.43      0.56       546
+                 storm       0.69      0.54      0.60       594
+                  fire       0.50      0.03      0.06        65
+            earthquake       0.85      0.75      0.80       651
+                  cold       0.85      0.15      0.25       148
+         other_weather       0.38      0.13      0.19       332
+         direct_report       0.62      0.40      0.49      1222
+
+           avg / total       0.67      0.53      0.57     20488
+
+
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
+
+parameters = {'clf__estimator__n_estimators': [5, 5]}
+
+Fitting 2 folds for each of 2 candidates, totalling 4 fits
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.598041448417217, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=-1)]: Done   1 out of   1 | elapsed:  2.1min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.6042313223828628, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed:  4.3min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=5, score=0.6032475605621067, total= 1.5min
+[CV] clf__estimator__n_estimators=5 ..................................
+[CV]  clf__estimator__n_estimators=5, score=0.6053549309194856, total= 1.5min
+
+[Parallel(n_jobs=-1)]: Done   4 out of   4 | elapsed:  8.6min finished
+
+grid search done.
+
+precision    recall  f1-score   support
+
+               related       0.83      0.92      0.87      4943
+               request       0.68      0.47      0.56      1094
+                 offer       0.00      0.00      0.00        29
+           aid_related       0.70      0.65      0.67      2658
+          medical_help       0.54      0.18      0.27       520
+      medical_products       0.65      0.15      0.24       348
+     search_and_rescue       0.44      0.09      0.15       195
+              security       0.33      0.04      0.08       117
+              military       0.51      0.12      0.19       207
+           child_alone       0.00      0.00      0.00         0
+                 water       0.72      0.33      0.46       402
+                  food       0.76      0.61      0.68       705
+               shelter       0.69      0.40      0.51       546
+              clothing       0.66      0.21      0.32        90
+                 money       0.73      0.12      0.21       128
+        missing_people       0.28      0.08      0.12        66
+              refugees       0.31      0.06      0.10       194
+                 death       0.67      0.20      0.31       290
+             other_aid       0.40      0.10      0.16       847
+infrastructure_related       0.15      0.02      0.03       443
+             transport       0.36      0.09      0.15       295
+             buildings       0.64      0.26      0.37       327
+           electricity       0.52      0.10      0.17       120
+                 tools       0.00      0.00      0.00        39
+             hospitals       0.50      0.02      0.03        64
+                 shops       0.00      0.00      0.00        32
+           aid_centers       0.00      0.00      0.00        81
+  other_infrastructure       0.14      0.01      0.02       306
+       weather_related       0.79      0.63      0.70      1844
+                floods       0.73      0.36      0.49       546
+                 storm       0.71      0.49      0.58       594
+                  fire       0.56      0.15      0.24        65
+            earthquake       0.86      0.71      0.77       651
+                  cold       0.73      0.25      0.37       148
+         other_weather       0.30      0.07      0.11       332
+         direct_report       0.62      0.39      0.48      1222
+
+           avg / total       0.67      0.53      0.56     20488
+
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
+
+parameters = {'clf__estimator__n_estimators': [50, 50]}
+
+
+Fitting 2 folds for each of 2 candidates, totalling 4 fits
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6293520686963309, total= 3.1min
+[CV] clf__estimator__n_estimators=50 .................................
+
+[Parallel(n_jobs=-1)]: Done   1 out of   1 | elapsed:  3.9min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=50, score=0.6352839897478038, total= 3.2min
+[CV] clf__estimator__n_estimators=50 .................................
+
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed:  7.9min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=50, score=0.6316158429723098, total= 3.4min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.62814011086213, total= 3.4min
+
+[Parallel(n_jobs=-1)]: Done   4 out of   4 | elapsed: 16.6min finished
+
+
+                        precision    recall  f1-score   support
+
+               related       0.83      0.95      0.89      4943
+               request       0.81      0.49      0.61      1094
+                 offer       0.00      0.00      0.00        29
+           aid_related       0.76      0.68      0.72      2658
+          medical_help       0.64      0.08      0.15       520
+      medical_products       0.81      0.08      0.15       348
+     search_and_rescue       1.00      0.03      0.06       195
+              security       0.00      0.00      0.00       117
+              military       0.68      0.06      0.12       207
+           child_alone       0.00      0.00      0.00         0
+                 water       0.89      0.37      0.52       402
+                  food       0.82      0.57      0.67       705
+               shelter       0.86      0.34      0.49       546
+              clothing       0.74      0.16      0.26        90
+                 money       0.88      0.05      0.10       128
+        missing_people       0.33      0.02      0.03        66
+              refugees       0.67      0.02      0.04       194
+                 death       0.80      0.12      0.21       290
+             other_aid       0.68      0.04      0.07       847
+infrastructure_related       0.20      0.00      0.00       443
+             transport       0.71      0.07      0.12       295
+             buildings       0.88      0.17      0.29       327
+           electricity       0.57      0.03      0.06       120
+                 tools       0.00      0.00      0.00        39
+             hospitals       1.00      0.02      0.03        64
+                 shops       0.00      0.00      0.00        32
+           aid_centers       0.00      0.00      0.00        81
+  other_infrastructure       0.20      0.00      0.01       306
+       weather_related       0.84      0.69      0.76      1844
+                floods       0.88      0.44      0.58       546
+                 storm       0.76      0.50      0.60       594
+                  fire       1.00      0.02      0.03        65
+            earthquake       0.88      0.78      0.83       651
+                  cold       0.92      0.08      0.15       148
+         other_weather       0.54      0.04      0.07       332
+         direct_report       0.76      0.37      0.50      1222
+
+           avg / total       0.76      0.53      0.57     20488
+
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 5, verbose = 3, n_jobs = -1)
+
+parameters = {'clf__estimator__n_estimators': [50, 50]}
+
+Fitting 5 folds for each of 2 candidates, totalling 10 fits
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6353689690075673, total= 4.8min
+[CV] clf__estimator__n_estimators=50 .................................
+
+[Parallel(n_jobs=-1)]: Done   1 out of   1 | elapsed:  6.2min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=50, score=0.6475552968568102, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed: 12.3min remaining:    0.0s
+
+[CV]  clf__estimator__n_estimators=50, score=0.6400505738183232, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6381939014855357, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6406791237742109, total= 4.8min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6339397439599577, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.646947399096605, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.64254843878988, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6418609187554861, total= 4.7min
+[CV] clf__estimator__n_estimators=50 .................................
+[CV]  clf__estimator__n_estimators=50, score=0.6418500268331951, total= 4.7min
+
+[Parallel(n_jobs=-1)]: Done  10 out of  10 | elapsed: 61.3min finished
+
+precision    recall  f1-score   support
+
+               related       0.83      0.95      0.89      4943
+               request       0.81      0.48      0.60      1094
+                 offer       0.00      0.00      0.00        29
+           aid_related       0.76      0.68      0.72      2658
+          medical_help       0.62      0.07      0.12       520
+      medical_products       0.81      0.08      0.15       348
+     search_and_rescue       0.83      0.05      0.10       195
+              security       0.50      0.01      0.02       117
+              military       0.90      0.04      0.08       207
+           child_alone       0.00      0.00      0.00         0
+                 water       0.88      0.31      0.46       402
+                  food       0.83      0.59      0.69       705
+               shelter       0.85      0.34      0.48       546
+              clothing       0.74      0.16      0.26        90
+                 money       0.83      0.04      0.07       128
+        missing_people       0.00      0.00      0.00        66
+              refugees       0.50      0.01      0.01       194
+                 death       0.78      0.16      0.26       290
+             other_aid       0.51      0.03      0.05       847
+infrastructure_related       0.33      0.00      0.01       443
+             transport       0.67      0.08      0.15       295
+             buildings       0.80      0.11      0.19       327
+           electricity       0.75      0.03      0.05       120
+                 tools       0.00      0.00      0.00        39
+             hospitals       0.00      0.00      0.00        64
+                 shops       0.00      0.00      0.00        32
+           aid_centers       0.00      0.00      0.00        81
+  other_infrastructure       0.00      0.00      0.00       306
+       weather_related       0.84      0.68      0.75      1844
+                floods       0.88      0.48      0.62       546
+                 storm       0.75      0.48      0.58       594
+                  fire       0.50      0.02      0.03        65
+            earthquake       0.88      0.79      0.83       651
+                  cold       0.92      0.08      0.15       148
+         other_weather       0.47      0.03      0.05       332
+         direct_report       0.77      0.37      0.50      1222
+
+           avg / total       0.75      0.53      0.57     20488
+
+-> model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
+
+ ('clf', MultiOutputClassifier(KNeighborsClassifier()))
+
+parameters = {'clf__estimator__n_neighbors': [5, 5]}
+
+Fitting 2 folds for each of 2 candidates, totalling 4 fits
+[CV] clf__estimator__n_neighbors=5 ...................................
+[CV]  clf__estimator__n_neighbors=5, score=0.5461577054937704, total= 6.2min
+[CV] clf__estimator__n_neighbors=5 ...................................
+
+[Parallel(n_jobs=-1)]: Done   1 out of   1 | elapsed: 10.3min remaining:    0.0s
+
+[CV]  clf__estimator__n_neighbors=5, score=0.552763614942412, total= 6.2min
+[CV] clf__estimator__n_neighbors=5 ...................................
+
+[Parallel(n_jobs=-1)]: Done   2 out of   2 | elapsed: 20.5min remaining:    0.0s
+
+[CV]  clf__estimator__n_neighbors=5, score=0.5461577054937704, total= 6.2min
+[CV] clf__estimator__n_neighbors=5 ...................................
+[CV]  clf__estimator__n_neighbors=5, score=0.552763614942412, total= 6.2min
+
+[Parallel(n_jobs=-1)]: Done   4 out of   4 | elapsed: 41.0min finished
+
+                        precision    recall  f1-score   support
+
+               related       0.81      0.96      0.88      5006
+               request       0.73      0.28      0.41      1125
+                 offer       0.00      0.00      0.00        33
+           aid_related       0.75      0.27      0.40      2778
+          medical_help       0.65      0.05      0.09       525
+      medical_products       0.62      0.05      0.09       335
+     search_and_rescue       0.83      0.03      0.06       171
+              security       0.00      0.00      0.00       107
+              military       0.75      0.06      0.11       204
+           child_alone       0.00      0.00      0.00         0
+                 water       0.78      0.13      0.22       423
+                  food       0.77      0.19      0.31       751
+               shelter       0.64      0.09      0.16       591
+              clothing       0.69      0.09      0.16       103
+                 money       0.78      0.04      0.08       166
+        missing_people       0.50      0.02      0.03        57
+              refugees       0.50      0.02      0.04       230
+                 death       0.70      0.09      0.17       317
+             other_aid       0.41      0.05      0.10       891
+infrastructure_related       0.53      0.02      0.04       477
+             transport       0.70      0.05      0.09       299
+             buildings       0.56      0.06      0.10       347
+           electricity       0.57      0.03      0.05       152
+                 tools       0.00      0.00      0.00        41
+             hospitals       0.00      0.00      0.00        75
+                 shops       0.00      0.00      0.00        29
+           aid_centers       0.00      0.00      0.00       104
+  other_infrastructure       0.00      0.00      0.00       314
+       weather_related       0.87      0.40      0.55      1832
+                floods       0.83      0.12      0.21       538
+                 storm       0.70      0.12      0.20       606
+                  fire       0.66      0.37      0.47        68
+            earthquake       0.89      0.77      0.83       612
+                  cold       0.70      0.05      0.09       152
+         other_weather       0.68      0.04      0.08       373
+         direct_report       0.63      0.19      0.29      1263
+
+           avg / total       0.71      0.38      0.42     21095
