@@ -30,13 +30,14 @@ def load_data(messages_filepath, categories_filepath):
 def clean_data(df):
     """
         Purpose:
-
+        splits all categories into individual columns and cleans up each message's category.
 
         Arguments:
-        df -- a dataframe containing all messages and their categories
+        df -- a dataframe containing all messages and their categories.
 
         Returns:
-        a cleaned dataframe
+        a cleaned dataframe with all messages and their corresponding categories flagged as '1'
+        ready to be used in a classifier.
     """
 
     # gets the individual categories in a new dataframe by splitting using the ";" separator yielding one category per column -> 36 categories in total
@@ -74,7 +75,7 @@ def clean_data(df):
 def save_data(df, database_filename):
     """
         Purpose:
-        saves a cleaned messages and categories dataframeto a sqlite database on disk
+        saves a cleaned messages and categories dataframe to a sqlite database on disk
 
         Arguments:
         df -- the dataframe to save

@@ -127,41 +127,6 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
     print(classification_report(Y_test, y_pred, target_names = category_names))
 
-    #print(category_names)
-    #print(len(category_names))
-
-    #print(X_test.shape)
-    #print(X_test.iloc[0])
-
-    #print(Y_test.shape)
-    #print(Y_test[0,:])
-
-    #print(y_pred.shape)
-    #print(y_pred[0,:])
-
-    # gets a report on precision, recall and f1 for each class
-    #for idx in range(Y_test.shape[1]):
-
-        #print("Y_test[:,idx] -> ", Y_test[:,idx])
-        #print(Y_test[:,idx].shape)
-
-        #print("y_pred[:,idx] -> ", y_pred[:,idx])
-        #print(y_pred[:,idx].shape)
-
-        #print("[category_names[idx]] -> ", [category_names[idx]])
-        #print(category_names[idx].shape)
-
-        # prints the report for this specific column -> higher f1 scores are better
-        #print(classification_report(Y_test[:,idx], y_pred[:,idx], target_names = [category_names[idx]]))
-        #print(classification_report(Y_test[:,idx], y_pred[:,idx], target_names = [category_names[idx]]))
-
-    # prints model accuracy
-    #print("Accuracy Scores:")
-    #for idx in range(Y_test.shape[1]):
-    #    print("    ", category_names[idx], " -> ", accuracy_score(Y_test[:,idx], y_pred[:,idx]))
-
-
-
 
 def save_model(model, model_filepath):
 
