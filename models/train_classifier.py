@@ -107,11 +107,12 @@ def build_model():
     pipeline = Pipeline([
         ('vect', CountVectorizer(tokenizer=tokenize)),
         ('tfidf', TfidfTransformer()),
-        ('clf',  MultiOutputClassifier(RandomForestClassifier()))
+        ('clf',  MultiOutputClassifier(KNeighborsClassifier()))
+        #('clf',  MultiOutputClassifier(RandomForestClassifier()))
     ])
 
-    #parameters = {'clf__estimator__n_neighbors': [5, 5]}
-    parameters = {'clf__estimator__n_estimators': [5, 5]}
+    parameters = {'clf__estimator__n_neighbors': [5, 5]}
+    #parameters = {'clf__estimator__n_estimators': [5, 5]}
 
     model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
 
