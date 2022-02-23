@@ -92,6 +92,30 @@ def tokenize(text):
 
     return lemmed
 
+class FireKeywordsExtractor(BaseEstimator, TransformerMixin):
+    """
+        a custom class which will be used as a new feature in our pipeline.
+    """
+
+    def fire_keywords(self, text):
+
+        # tokenises text
+        tokens_v = tokenize(text)
+
+        # checks if certain keywords exists
+        contains_fire = ("fire" in tokens_v) or ("smoke" in tokens_v)
+
+        return contains_fire
+
+    def fit(self, x, y=None):
+        return self
+
+    def transform(self, X):
+
+        X_tagged = pd.Series(X).apply(self.fire_keywords)
+
+        return pd.DataFrame(X_tagged)
+
 
 def build_model():
     """
@@ -103,18 +127,23 @@ def build_model():
         a pipeline model ready to be trained
     """
 
-    # defines a pipeline using tf-idf
     pipeline = Pipeline([
-        ('vect', CountVectorizer(tokenizer=tokenize)),
-        ('tfidf', TfidfTransformer()),
-        ('clf',  MultiOutputClassifier(KNeighborsClassifier()))
-        #('clf',  MultiOutputClassifier(RandomForestClassifier()))
+
+        ('features', FeatureUnion([
+
+            ('text_pipeline', Pipeline([
+                ('vect', CountVectorizer(tokenizer=tokenize)),
+                ('tfidf', TfidfTransformer())
+            ])),
+
+            ('fire_keywords', FireKeywordsExtractor())
+        ])),
+        ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
 
-    parameters = {'clf__estimator__n_neighbors': [5, 5]}
-    #parameters = {'clf__estimator__n_estimators': [5, 5]}
+    parameters = {'clf__estimator__n_estimators': [5, 5]}
 
-    model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
+    model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = 1)
 
     return model
 
