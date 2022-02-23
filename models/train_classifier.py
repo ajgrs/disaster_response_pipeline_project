@@ -29,6 +29,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.multioutput import MultiOutputClassifier
 from sklearn.pipeline import Pipeline
 
+from sklearn.base import BaseEstimator, TransformerMixin
+
 import pickle
 
 def load_data(database_filepath):
