@@ -111,7 +111,7 @@ def build_model():
     ])
 
     #parameters = {'clf__estimator__n_neighbors': [5, 5]}
-    parameters = {'clf__n_neighbors': [5, 5]}
+    parameters = {'clf__estimator__n_estimators': [5, 5]}
 
     model = GridSearchCV(estimator = pipeline, param_grid = parameters, scoring = 'f1_micro', cv = 2, verbose = 3, n_jobs = -1)
 
