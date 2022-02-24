@@ -37,9 +37,9 @@
 
 ### Dependencies
 
-Flask==0.12.5
-nltk==3.2.5
-pandas==0.23.3
-plotly==2.0.15
-scikit_learn==1.0.2
-SQLAlchemy==1.2.19
+- Flask==0.12.5
+- nltk==3.2.5
+- pandas==0.23.3
+- plotly==2.0.15
+- scikit_learn==1.0.2
+- SQLAlchemy==1.2.19
